@@ -7,6 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroFirstComponent implements OnInit {
 
+
+ hero : any[] =[]
+
+ myhero ={
+  name:"" ,
+  power:'',
+  image:""
+ }
+ addhero(){
+  this.hero.push(this.myhero)
+  this.myhero ={
+    name:"" ,
+    power:'',
+    image:""
+   }
+
+}
+
+
   constructor() { }
 
   ngOnInit(): void {
