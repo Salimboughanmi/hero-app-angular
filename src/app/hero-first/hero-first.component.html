@@ -1,52 +1,6 @@
 <div class="container">
   <h1 class="text-center mt-4 text-light">Hero app</h1>
 
-  <div class="row mt-4">
-    <div class="col-md-3">
-      <input
-        type="text"
-        class="form-control m-1"
-        placeholder="name"
-        [(ngModel)]="myhero.name"
-      />
-    </div>
-    <div class="col-md-3">
-      <input
-        type="text"
-        class="form-control m-1"
-        placeholder="power"
-        [(ngModel)]="myhero.power"
-      />
-    </div>
-    <div class="col-md-3">
-      <input
-        type="text"
-        class="form-control m-1"
-        placeholder="image Url"
-        [(ngModel)]="myhero.image"
-      />
-    </div>
-    <div class="col-md-3">
-      <button (click)="addhero()" class="btn form-control m-1">CREATE</button>
-    </div>
-  </div>
-
-  <div class="row mt-4">
-    <div class="col-3" *ngFor="let item of hero">
-      <div
-        class="card p-1"
-        [ngClass]="{
-          'bg-red': item.power > 50,
-          'bg-yellow': item.power <= 50 && item.power > 20,
-          'bg-green': item.power <= 20
-        }"
-      >
-        <img [src]="item.image" class="w-100" />
-        <div class="card-image">
-          <h2 class="card-text">{{ item.name }}</h2>
-          <p>{{ item.power }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-ajout></app-ajout>
+  <app-list></app-list>
 </div>
