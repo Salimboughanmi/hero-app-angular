@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { HeroFirstComponent } from './hero-first/hero-first.component';
 import { AjoutComponent } from './ajout/ajout.component';
 import { ListComponent } from './list/list.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ListComponent } from './list/list.component';
     HeroFirstComponent,
     AjoutComponent,
     ListComponent,
+    HeaderComponent,
 
   ],
   imports: [
