@@ -14,15 +14,40 @@ export class AjoutComponent implements OnInit {
   image:""
  }
 
- addhero(){
-  this._shared.hero.push(this.myhero)
+/*  addhero(){
+  this._shared.heros.push(this.myhero)
   this.myhero ={
     name:"" ,
     power:'',
     image:""
    }
 
-}
+} */
+
+   addhero(){
+    this._shared.createNewHero(this.myhero).subscribe(res=>{
+      console.log(res);
+       this.myhero ={
+        name:"" ,
+        power:'',
+        image:""
+       }
+
+    },
+    err=>{console.log(err);})
+   }
+
+
+   /*  addhero(){
+    this._shared.createNewHero(this.myhero).subscribe(res=>{
+      console.log(res);
+      this.myhero ={
+        name:"" ,
+        power:'',
+        image:""
+       }
+    })
+   } */
 
   constructor(public _shared: SharedService) { }
 

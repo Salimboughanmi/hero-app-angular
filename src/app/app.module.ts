@@ -9,7 +9,7 @@ import { HeroFirstComponent } from './hero-first/hero-first.component';
 import { AjoutComponent } from './ajout/ajout.component';
 import { ListComponent } from './list/list.component';
 import { HeaderComponent } from './header/header.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +23,8 @@ import { HeaderComponent } from './header/header.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
